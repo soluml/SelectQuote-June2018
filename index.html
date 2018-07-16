@@ -125,7 +125,7 @@
           </h1>
           <pre><code class="html" style="white-space: pre-line;">&lt;head&gt;
               &nbsp;&nbsp;&lt;title&gt;Full-Stack JavaScript Developer at SelectQuote&lt;/title&gt;
-              &nbsp;&nbsp;&lt;meta name="description" content="Work on the Select Care 2 app"&gt;
+              &nbsp;&nbsp;&lt;meta name="description" content="Working on various internal apps"&gt;
               &nbsp;&nbsp;&lt;meta name="twitter:site" content="@soluml"&gt;
               &nbsp;&nbsp;&lt;meta http-equiv="Content-Type" content="Human/Olathe,KS"&gt;
               &nbsp;&nbsp;&lt;meta name="viewport" content="Work on Mac;Play on PC"&gt;
@@ -149,8 +149,14 @@
       </section>
 
       <section>
-        <h2>What do I mean when I say "CSS&nbsp;Architectures"?</h2>
+        <h2>Define "CSS&nbsp;Architectures"?</h2>
         <blockquote class="fragment">Effectively CSS conventions and tools that help us build modern Web UIs</blockquote>
+      </section>
+
+      <section>
+        <h1>Remember</h1>
+        <blockquote class="fragment">There is no one right away to approach CSS...</blockquote>
+        <blockquote class="fragment">...but there are plenty of wrong ways 😅</blockquote>
       </section>
 
       <section>
@@ -166,20 +172,35 @@
             <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> - Normalizes UA Agent styles</li>
           <li>
             <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Reset</a> - Resets UA Agent styles to `0`</li>
+          <li>
+            <a href="https://github.com/h5bp/main.css/blob/master/main.css">H5BP</a> - Additional normalization suggestions based on a lot of cross-browser research</li>
         </ul>
         <p>
-          <strong>Be sure to customize either solution to your project's needs.</strong>
+          <strong>Be sure to customize either solution to your project's needs and conventions.</strong>
         </p>
       </section>
 
       <section>
         <h2>What are my considerations when choosing a CSS Convention?</h2>
         <ol>
-          <li class="fragment">Must handle Specificity</li>
+          <li class="fragment">Theming*</li>
+          <li class="fragment">Specificity Management*</li>
           <li class="fragment">Must have high Maintainability (Updating/Refactoring)</li>
           <li class="fragment">Reusability</li>
           <li class="fragment">Low Bloat / Small Size</li>
-          <li class="fragment">Themable</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>
+          <u>A Note on Theming</u>
+        </h3>
+        <blockquote>Theming or white labeling your product may factor in to your convention decisions. It's typically handled in one
+          of three ways:</blockquote>
+        <ol>
+          <li>Using modifier classes.</li>
+          <li>Generate different style sheets (typically with variables from a preprocessor).</li>
+          <li>CSS Custom Properties.</li>
         </ol>
       </section>
 
@@ -197,18 +218,7 @@
         </div>
       </section>
 
-      <section>
-        <h3>
-          <u>A Note on Theming</u>
-        </h3>
-        <blockquote>Theming or white labeling your product may factor in to your convention decisions. It's typically handled in one
-          of three ways:</blockquote>
-        <ol>
-          <li>Using modifier classes.</li>
-          <li>Generate different style sheets (typically with variables from a preprocessor).</li>
-          <li>CSS Custom Properties.</li>
-        </ol>
-      </section>
+
 
       <section>
         <h1>Common CSS Conventions</h1>

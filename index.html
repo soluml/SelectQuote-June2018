@@ -451,7 +451,7 @@ nav {
 
       <section>
         <section>
-          <h3>Inline (Radium)</h3>
+          <h3>Inline Convention</h3>
           <pre><code class="js">//Radium
 var styles = {
   base: {
@@ -472,7 +472,7 @@ var styles = {
 };</code></pre>
         </section>
         <section>
-          <h4>Inline Breakdown:</h4>
+          <h4>Inline Convention Breakdown:</h4>
           <ul>
             <li>Inline conventions make use of the style attribute on HTML elements:
               <pre style="display:inline;"><code class="html" style="display:inline;">&lt;div style="color:blue;"&gt;</code></pre>
@@ -518,7 +518,7 @@ var styles = {
 
       <section>
         <section>
-          <h3>Atomic</h3>
+          <h3>Atomic Convention</h3>
           <blockquote>When it comes to CSS, I believe that the sacred principle of “separation of concerns” (SoC) has lead us to accept
             bloat, obsolescence, redundancy, poor caching and more. Now, I’m convinced that the only way to improve how we
             author style sheets is by moving away from this principle.</blockquote>
@@ -526,7 +526,7 @@ var styles = {
             <a href="https://www.smashingmagazine.com/2013/10/challenging-css-best-practices-atomic-approach/">Challenging CSS Best Practices</a> - Thierry Koblentz</small>
         </section>
         <section>
-          <h3>Atomic</h3>
+          <h3>Atomic Convention</h3>
           <pre><code class="html">&lt;div class="positionAbs displayFlex displayBlock600mw"&gt;
   Lorem ipsum
 &lt;/div&gt;</code></pre>
@@ -539,7 +539,7 @@ var styles = {
 </code></pre>
         </section>
         <section>
-          <h4>Atomic Breakdown:</h4>
+          <h4>Atomic Convention Breakdown:</h4>
           <ul>
             <li>Functional Programming meets CSS. All necessary CSS properties become individual, immutable classes.</li>
             <li>To style, just add the classes you need</li>
@@ -799,17 +799,17 @@ custom: {
           <h4>CSS Blocks Breakdown:</h4>
           <ul>
             <li>Combines BEM and Atomic conventions to produce utility classes that are only ever as large as they need to be.</li>
+            <li>With a few adjustments, it looks to be able to produce best-in-class CSS file sizes.</li>
           </ul>
         </section>
         <section>
           <h3>CSS Blocks</h3>
           <h4>Pros:</h4>
           <ul>
-            <li>Groups class values into many utility bundles based on usage across all components producing even fewer class names than PreStyle</li>
+            <li>Groups class values into many utility bundles based on usage across all components</li>
             <li>Authoring works with traditional *.block.css files!</li>
             <li>Can add any preprocessor/syntax into the mix!</li>
-            <li>Fast build times!</li>
-            <li>Limits the types of selectors you can use to maximize perf. (in most cases).</li>
+            <li>Limits the types of selectors you can use to maximize perf.*</li>
           </ul>
           <div class="fragment">
             <h4>Cons:</h4>

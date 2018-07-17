@@ -100,6 +100,18 @@
       text-align: left;
       width: 100%;
     }
+
+    .reveal section.preprocessor ol {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .reveal section.preprocessor img {
+      border: 0;
+    }
   </style>
 </head>
 
@@ -187,28 +199,97 @@
       </section>
 
       <section>
-        <h2>PostCSS:</h2>
-        <blockquote>A tool for transforming styles with JS plugins by transforming CSS into an AST.</blockquote>
-      </section>
-
-      <section>
-        <h3>Autoprefixer</h3>
+        <h3>Autoprefixer
+          <small>
+            <a href="https://github.com/postcss/autoprefixer" target="new">🌐</a>
+          </small>
+        </h3>
         <blockquote>PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from
           <a href="https://caniuse.com/" target="new">Can&nbsp;I&nbsp;Use</a>
         </blockquote>
-        <p>Autoprefixer uses <a href="https://github.com/browserslist/browserslist">Browserslist</a>, so you can specify the browsers you want to target in your project by queries like
-          &gt; 5%.</p>
+        <p>Autoprefixer uses
+          <a href="https://github.com/browserslist/browserslist">Browserslist</a>, so you can specify the browsers you want to target in your project by queries like &gt; 5%.</p>
       </section>
 
       <section>
-        <h3>cssnano</h3>
+        <h3>cssnano
+          <small>
+            <a href="https://cssnano.co/" target="new">🌐</a>
+          </small>
+
+        </h3>
         <blockquote>PostCSS plugin for modern CSS compression
         </blockquote>
-        <p>cssnano has dozens of optimisations both safe for all stylesheets and more advanced to squeeze every unnecessary byte out.</p>
+        <p>cssnano has dozens of optimisations both safe for all stylesheets and more advanced to squeeze every unnecessary
+          byte out.</p>
       </section>
 
+      <section>
+        <h3>Critical
+          <small>
+            <a href="https://github.com/addyosmani/critical" target="new">🌐</a>
+          </small>
+        </h3>
+        <blockquote>Critical extracts &amp; inlines critical-path (above-the-fold) CSS from HTML
+        </blockquote>
+        <p>Why? CSS is required to construct the render tree for your pages and JavaScript will often block on CSS during initial
+          construction of the page.</p>
+      </section>
 
+      <section>
+        <h3>UnCSS
+          <small>
+            <a href="https://github.com/uncss/uncss" target="new">🌐</a>
+          </small>
+        </h3>
+        <blockquote>a tool that removes unused CSS from your stylesheets. It works across multiple files and supports Javascript-injected
+          CSS
+        </blockquote>
+      </section>
 
+      <section>
+        <h3>Bless
+          <small>
+            <a href="http://blesscss.com/" target="new">🌐</a>
+          </small>
+        </h3>
+        <blockquote>Provides a simple solution to a lesser-known bug in Internet Explorer which causes CSS to be completely ignored.
+        </blockquote>
+        <p>IE versions 6-9 all have a limit on the number of selectors allowed in a single CSS file. Once the limit is reached,
+          IE silently fails and just ignores any further CSS in the file leaving parts of your site totally unstyled.</p>
+      </section>
+
+      <section>
+        <h3>Stylelint
+          <small>
+            <a href="https://stylelint.io/" target="new">🌐</a>
+          </small>
+        </h3>
+        <blockquote>A modern CSS linter and fixer that helps you avoid errors and enforce consistent conventions in your stylesheets.
+        </blockquote>
+        <p>This is a great tool to help enforce project conventions and can even be used to "auto-correct" some mistakes.</p>
+      </section>
+
+      <section class="preprocessor">
+        <h2>Pre-processors</h2>
+        <ol>
+          <li>
+            <a href="https://sass-lang.com/">
+              <img src="img/sass-logo.svg">
+            </a>
+          </li>
+          <li>
+            <a href="http://lesscss.org/">
+              <img src="img/less_logo.png">
+            </a>
+          </li>
+          <li>
+            <a href="http://stylus-lang.com/">
+              <img src="img/stylus-logo.svg">
+            </a>
+          </li>
+        </ol>
+      </section>
 
       <section>
         <h1>Common CSS Conventions</h1>

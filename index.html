@@ -750,28 +750,78 @@ custom: {
               <pre style="display:inline;"><code class="css" style="display:inline;">color: #fff;</code></pre> and
               <pre style="display:inline;"><code class="css" style="display:inline;">color: white;</code></pre> are now the same atomic class!</li>
             <li>No JS templating language dependency! Provides a babel-plugin for ease-of-use within JS bundles.</li>
+            <li>Complete authoring freedom!</li>
           </ul>
           <div class="fragment">
             <h4>Cons:</h4>
             <ul>
-              <li>Still in Alpha, but we're already using it at LifeWay and I'm quick at making fixes!</li>
+              <li>Slow in HMR builds</li>
+              <li>Can get painfully slow on projects of scale</li>
+              <li>Complete authoring freedom...</li>
             </ul>
           </div>
         </section>
       </section>
-
-
       <section>
         <section>
           <h3>CSS Blocks</h3>
+          <pre><code class="css">:scope {
+  background-color: #ed2651;
+  border: 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: white;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 0 16px;
+}
+
+:scope[state|inverse] {
+  background-color: white;
+  color: #ed2651;
+}
+
+:scope[state|size=small] {
+  height: 16px;
+  line-height: 16px;
+  padding: 0px 8px;
+}
+
+.icon {
+  height: 16px;
+  margin-right: 8px;
+  overflow: hidden;
+  width: 16px;
+}</code></pre>
+        </section>
+        <section>
+          <h4>CSS Blocks Breakdown:</h4>
+          <ul>
+            <li>Combines BEM and Atomic conventions to produce utility classes that are only ever as large as they need to be.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>CSS Blocks</h3>
+          <h4>Pros:</h4>
+          <ul>
+            <li>Groups class values into many utility bundles based on usage across all components producing even fewer class names than PreStyle</li>
+            <li>Authoring works with traditional *.block.css files!</li>
+            <li>Can add any preprocessor/syntax into the mix!</li>
+            <li>Fast build times!</li>
+            <li>Limits the types of selectors you can use to maximize perf. (in most cases).</li>
+          </ul>
+          <div class="fragment">
+            <h4>Cons:</h4>
+            <ul>
+              <li>Limits the types of selectors you can use</li>
+              <li>Doesn't normalize values but this can be monkey-patched</li>
+              <li>Currently highly difficult to setup</li>
+              <li>Webpack builds currently have a hard 3.x dependency</li>
+            </ul>
+          </div>
         </section>
       </section>
-
-
-
-
-
-
 
       <section>
         <h2>Thanks!</h2>

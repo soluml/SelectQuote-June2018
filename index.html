@@ -181,7 +181,11 @@
       </section>
 
       <section>
-        <h2>What are my considerations when choosing a CSS Convention?</h2>
+        <h1>Common CSS Conventions</h1>
+      </section>
+
+      <section>
+        <h2>What are my top considerations when choosing a CSS Convention?</h2>
         <ol>
           <li class="fragment">Theming*</li>
           <li class="fragment">Specificity Management*</li>
@@ -195,8 +199,7 @@
         <h3>
           <u>A Note on Theming</u>
         </h3>
-        <blockquote>Theming or white labeling your product may factor in to your convention decisions. It's typically handled in one
-          of three ways:</blockquote>
+        <blockquote style="text-align: left;">Theming should factor in to your convention decisions. It's typically handled in one of three ways:</blockquote>
         <ol>
           <li>Using modifier classes.</li>
           <li>Generate different style sheets (typically with variables from a preprocessor).</li>
@@ -218,61 +221,10 @@
         </div>
       </section>
 
-
-
-      <section>
-        <h1>Common CSS Conventions</h1>
-      </section>
-
       <section>
         <section>
-          <h3>Cowboy or Wild Wild West</h3>
-          <pre><code class="scss">// Sass/LESS
-.blog-post {
-  .title {
-    font-size: 2rem;
-  }
-}
-
-h1 {
-  font-size: 5rem !important;
-}
-
-#main {
-  color: black;
-}
-          </code></pre>
-        </section>
-        <section>
-          <h4>Cowboy &mdash; Breakdown:</h4>
-          <ul>
-            <li>What not to do. Anything goes. Doesn't handle any consideration.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Nested</h3>
-          <h4>Pros:</h4>
-          <ul>
-            <li>So easy even a script kiddie could write it.</li>
-          </ul>
-          <div class="fragment">
-            <h4>Cons:</h4>
-            <ul>
-              <li>Nearly impossible to refactor. Will need to be rewritten.</li>
-              <li>Zero reusability across markup structures; scales quite poorly!</li>
-              <li>Will keep growing over time.</li>
-              <li>
-                You'll be judged harshly by your successors
-                <img src="img/sad.gif" style="width: 300px; margin-left: 20em; transform: translateY(-60%)">
-              </li>
-            </ul>
-          </div>
-        </section>
-      </section>
-
-      <section>
-        <section>
-          <h3>Semantic or Nested Markup</h3>
+          <h3>
+            Semantic or Nested Markup Convention</h3>
           <pre><code class="scss">// Sass/LESS
 nav {
   background: #fff;
@@ -312,7 +264,7 @@ nav {
             <li>Easy to update</li>
             <li>The high specificity ensures you'll
               <em>*probably*</em> be fine</li>
-            <li>*The* choice for Web Components / Shadow DOM</li>
+            <li>Great choice for Web Components / Shadow DOM</li>
           </ul>
           <div class="fragment">
             <h4>Cons:</h4>
@@ -329,13 +281,10 @@ nav {
       </section>
 
       <section>
-        <section>OOCSS</section>
-      </section>
-
-      <section>
         <section>
-          <h3>BEM</h3>
+          <h3>Naming Conventions: primarily BEM (similarly OOCSS/SMACSS/ITCSS)</h3>
           <pre><code class="css">
+/* BEM */
 .button {
   display: inline-block;
   padding: 7px 12px;
@@ -364,7 +313,7 @@ nav {
             <li>These types of conventions enforce strict authoring guidelines to maintain specificity, typically by exclusively
               authoring your styles with class selectors and pseudo class selectors (i.e. -
               <pre style="display:inline;"><code class="css" style="display:inline;">.button:hover</code></pre>)</li>
-            <li>The classes have no semantic value and no opinions on the markup</li>
+            <li>The classes are completely divorced from the markup</li>
           </ul>
         </section>
         <section>
@@ -372,7 +321,7 @@ nav {
           <h4>Pros:</h4>
           <ul>
             <li>Still easy to update!</li>
-            <li>Strict adherence typically results in perfect specificity handling
+            <li>Strict adherence typically results in near-perfect specificity handling
               <small>&dagger;</small>
             </li>
             <li>Much higher reusability in comparison to the nested pattern.</li>
@@ -380,26 +329,13 @@ nav {
           <div class="fragment">
             <h4>Cons:</h4>
             <ul>
-              <li>Still difficult to refactor!</li>
+              <li>The more reusable the class names, the greater the difficulty in refactoring.</li>
               <li>
                 <small>&dagger;</small>You may still need to be mindful of the cascade</li>
               <li>Less bloaty initially than nested pattern; much easier to bloat during refactor</li>
-              <li>Ultimately outclassed by other conventions/tooling</li>
             </ul>
           </div>
         </section>
-      </section>
-
-      <section>
-        <section>SMACSS</section>
-      </section>
-
-      <section>
-        <section>ITCSS</section>
-      </section>
-
-      <section>
-        <section>SEM BIO</section>
       </section>
 
       <section>
@@ -451,6 +387,8 @@ var styles = {
               <li>Pseudo class support is non-existant</li>
               <li>Pseudo element support is non-existant</li>
               <li>No style caching; styles live in your document</li>
+              <li>
+                <abbr title="Flash of Un-styled Content">FOUC</abbr>'s are a series concern unless rendered server-side</li>
             </ul>
           </div>
           <aside class="notes">
@@ -515,6 +453,11 @@ var styles = {
           </div>
         </section>
       </section>
+
+
+
+
+
 
       <section>
         <h1>CSS Tooling</h1>
